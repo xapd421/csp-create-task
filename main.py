@@ -32,11 +32,6 @@ def getStats(rolls):
 
     return stats
 
-# rolls = rollDice(10)
-# print(rolls)
-# stats = getStats(rolls)
-# print(stats)
-
 print("Welcome to my create task")
 print("This app simulates rolling a dice")
 while True:
