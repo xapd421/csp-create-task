@@ -35,3 +35,8 @@ while True:
     print(f"You rolled...")
     for i in range(1, 7):
         print(f"{i}: {stats[i]} times")
+    mostRolled = 0
+    for i in range(1, 7):
+        if stats[i] > mostRolled:
+            mostRolled = i
+    print(f"{mostRolled} was rolled the most times")
