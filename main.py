@@ -37,6 +37,13 @@ while True:
         print(f"{i}: {stats[i]} times")
     mostRolled = 0
     for i in range(1, 7):
-        if stats[i] > mostRolled:
+        if stats[i] > stats[mostRolled]:
             mostRolled = i
     print(f"{mostRolled} was rolled the most times")
+    tied = []
+    for i in range(1, 7):
+        if i != mostRolled and stats[i] == stats[mostRolled]:
+            tied.append(i)
+    if len(tied) > 0:
+        tied_strings = [str(tie) for tie in tied]
+        print(f"{", ".join(tied_strings)} also tied")
