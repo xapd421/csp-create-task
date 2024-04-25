@@ -7,28 +7,21 @@ def rollDice(times):
     return rolls
 
 def getStats(rolls):
-    stats = {
-        "ones": 0,
-        "twos": 0,
-        "threes": 0,
-        "fours": 0,
-        "fives": 0,
-        "sixes": 0
-    }
+    stats = [0, 0, 0, 0, 0, 0, 0]
 
     for i in range(len(rolls)):
         if rolls[i] == 1:
-            stats["ones"] += 1
+            stats[1] += 1
         elif rolls[i] == 2:
-            stats["twos"] += 1
+            stats[2] += 1
         elif rolls[i] == 3:
-            stats["threes"] += 1
+            stats[3] += 1
         elif rolls[i] == 4:
-            stats["fours"] += 1
+            stats[4] += 1
         elif rolls[i] == 5:
-            stats["fives"] += 1
+            stats[5] += 1
         elif rolls[i] == 6:
-            stats["sixes"] += 1
+            stats[6] += 1
 
     return stats
 
@@ -39,4 +32,6 @@ while True:
     rolls = rollDice(times)
     stats = getStats(rolls)
     print(f"Rolls: {rolls}")
-    print(f"Stats: {stats}")
+    print(f"You rolled...")
+    for i in range(1, 7):
+        print(f"{i}: {stats[i]} times")
